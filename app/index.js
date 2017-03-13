@@ -1,6 +1,6 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
-var Home = require('./components/Home');
+var route = require('./config/routes');
 
 /*
     Focused
@@ -10,7 +10,7 @@ var Home = require('./components/Home');
     Testable
 */
 
-ReactDOM.render(
-<Home />,
+ReactDOM.render( 
+route,
 document.getElementById('app')
 ); 

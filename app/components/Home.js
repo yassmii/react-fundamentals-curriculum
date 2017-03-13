@@ -1,10 +1,11 @@
 var React = require('react');
 var SearchContainer = require ('../containers/SearchContainer');
+require('../main.css');
 
 function Home() {
     return (
-    <div class="jumbotron">
-        <SearchContainer  />
+    <div className="home">
+        <SearchContainer />
     </div>);
 };
 

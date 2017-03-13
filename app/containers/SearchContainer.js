@@ -3,7 +3,11 @@ var Search = require('../components/Search');
 
 var SearchContainer = React.createClass({
     render: function() {
-        return <Search />
+        return (
+            <div className="main-container">
+                <Search style="col-sm-6 col-md-offset-2"/>
+            </div>
+            )
     }
 })
 

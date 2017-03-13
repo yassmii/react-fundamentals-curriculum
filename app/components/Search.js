@@ -2,7 +2,7 @@ var React = require('react')
 
 function Search(props) {
     return (
-        <div>
+        <div className={props.style}>
             <input type="text" placeholder="Enter a city and a state"/>
             <button type="submit" className="btn btn-block btn-success">
                 Search

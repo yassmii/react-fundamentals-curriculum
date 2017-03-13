@@ -1,3 +1,4 @@
+var path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
     template: __dirname + '/app/index.html',
@@ -21,7 +22,15 @@ module.exports = {
                 loader: 'babel-loader'
             },
             {test:/\.css$/,
-            loader: "style-loader|css-loader"}
+            loader: "style-loader!css-loader"},
+
+            { 
+                test: /\.(jpg|png|svg)$/,
+                loader: 'url-loader',
+                options: {
+                    limit: 25000,
+                },
+            },            
         ]
     },
     plugins: [HtmlWebpackPluginConfig]

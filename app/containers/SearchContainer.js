@@ -3,6 +3,9 @@ var Search = require('../components/Search');
 var openWeatherHelper = require('../utils/openWeatherHelper');
 
 var SearchContainer = React.createClass({
+    contextTypes: {
+        router: React.PropTypes.object.isRequired
+    },
     getInitialState: function() {
         return {
             city: '',
@@ -20,9 +23,12 @@ var SearchContainer = React.createClass({
         e.preventDefault();
         var city = this.state.city;
         var state = this.state.state;
-        console.log(openWeatherHelper);
-        openWeatherHelper.getWeatherOfDay(city, state).then(function(weather){
-            console.log(weather);
+        this.context.router.push({
+            pathname:'/weazoru',
+            query: {
+                city: city,
+                state: state
+            }
         })
     },
     render: function() {

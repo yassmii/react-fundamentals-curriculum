@@ -21,8 +21,10 @@ module.exports = {
                 exclude: /node_modules/,
                 loader: 'babel-loader'
             },
-            {test:/\.css$/,
-            loader: "style-loader!css-loader"},
+            {
+                test:/\.css$/,
+                loader: "style-loader!css-loader"
+            },
             { 
                 test: /\.(jpg|png|svg)$/,
                 loader: 'url-loader',
@@ -30,7 +32,8 @@ module.exports = {
                     limit: 25000,
                 },
             },            
-        ]
+        ],
     },
-    plugins: [HtmlWebpackPluginConfig]
+    plugins: [
+        HtmlWebpackPluginConfig]
 }

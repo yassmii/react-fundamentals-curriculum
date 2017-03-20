@@ -45,7 +45,7 @@ var CityWeatherContainer = React.createClass({
                         weatherInfo={this.state.weatherOfDay}
                         />
                 </div>
-                <div className="col-md-12 col-md-offset-2 forecast-container">
+                <div className="col-md-9 col-md-offset-2 forecast-container">
                     <h2>Forecast</h2>
                     <Forecast
                     isLoading={this.state.isLoading}

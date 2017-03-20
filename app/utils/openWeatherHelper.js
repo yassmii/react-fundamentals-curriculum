@@ -9,7 +9,7 @@ function getWeatherOfDay(city, state) {
 }
 
 function getWeatherOfWeek(city, state) {
-    return axios.get("http://api.openweathermap.org/data/2.5/forecast/daily?q=" + city + ',' + state + param + "&cnt=5");
+    return axios.get("http://api.openweathermap.org/data/2.5/forecast/daily?q=" + city + ',' + state + param + "&cnt=10");
 }
 
 var openWeatherHelper = {

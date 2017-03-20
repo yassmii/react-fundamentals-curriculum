@@ -7,10 +7,15 @@ var Weather = function(props) {
     }
 
     var weatherStyle = 'wi wi-owm-'+ weatherInfo.weather[0].id;
-    console.log(weatherStyle);
-    return (<div>
+    var date = new Date(weatherInfo.dt * 1000).toDateString();
+    return (<div className="weather">
             <i className={weatherStyle}></i>
-            <h1>{weatherInfo.name}</h1>            
+            <p>{date}</p>
+            <p>{props.city}, {props.state}</p>
+            <p>{weatherInfo.description}</p>
+            <p>min temp: {weatherInfo.main.temp_min}</p>
+            <p>max temp: {weatherInfo.main.temp_max}</p>
+            <p>humidity: {weatherInfo.main.humidity}</p>            
         </div>
     )
 }

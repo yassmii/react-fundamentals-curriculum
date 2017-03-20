@@ -2,7 +2,7 @@ var axios = require('axios');
 
 var apiKey = 'ddb766cb0a3b8c07ba6795df30f2a15c';
 
-var param = "&type=accurate&APPID=" + apiKey ;
+var param = "&units=metric&type=accurate&APPID=" + apiKey ;
 
 function getWeatherOfDay(city, state) {
     return axios.get("http://api.openweathermap.org/data/2.5/weather?q=" + city + ',' + state + param);
